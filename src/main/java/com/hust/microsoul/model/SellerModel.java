@@ -1,7 +1,7 @@
 package com.hust.microsoul.model;
 
 public class SellerModel {
-    private Integer idSeller;
+    private Integer sellerId;
 
     private String accountName;
 
@@ -11,7 +11,7 @@ public class SellerModel {
 
     private String email;
 
-    private Integer qqAccount;
+    private String qqAccount;
 
     private String district;
 
@@ -19,18 +19,16 @@ public class SellerModel {
 
     private String address;
 
-    private Integer telephone;
+    private String telephone;
 
     private Integer state;
 
-    private Integer orderSellerId;
-
-    public Integer getIdSeller() {
-        return idSeller;
+    public Integer getSellerId() {
+        return sellerId;
     }
 
-    public void setIdSeller(Integer idSeller) {
-        this.idSeller = idSeller;
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
     }
 
     public String getAccountName() {
@@ -65,12 +63,12 @@ public class SellerModel {
         this.email = email == null ? null : email.trim();
     }
 
-    public Integer getQqAccount() {
+    public String getQqAccount() {
         return qqAccount;
     }
 
-    public void setQqAccount(Integer qqAccount) {
-        this.qqAccount = qqAccount;
+    public void setQqAccount(String qqAccount) {
+        this.qqAccount = qqAccount == null ? null : qqAccount.trim();
     }
 
     public String getDistrict() {
@@ -97,12 +95,12 @@ public class SellerModel {
         this.address = address == null ? null : address.trim();
     }
 
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
-        this.telephone = telephone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone == null ? null : telephone.trim();
     }
 
     public Integer getState() {
@@ -111,31 +109,5 @@ public class SellerModel {
 
     public void setState(Integer state) {
         this.state = state;
-    }
-
-    public Integer getOrderSellerId() {
-        return orderSellerId;
-    }
-
-    public void setOrderSellerId(Integer orderSellerId) {
-        this.orderSellerId = orderSellerId;
-    }
-
-    @Override
-    public String toString() {
-        return "SellerModel{" +
-                "idSeller=" + idSeller +
-                ", accountName='" + accountName + '\'' +
-                ", password='" + password + '\'' +
-                ", zhifubaoAccount='" + zhifubaoAccount + '\'' +
-                ", email='" + email + '\'' +
-                ", qqAccount=" + qqAccount +
-                ", district='" + district + '\'' +
-                ", realName='" + realName + '\'' +
-                ", address='" + address + '\'' +
-                ", telephone=" + telephone +
-                ", state=" + state +
-                ", orderSellerId=" + orderSellerId +
-                '}';
     }
 }

@@ -4,15 +4,13 @@ import com.hust.microsoul.model.SellerModel;
 import com.hust.microsoul.model.SellerModelExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface SellerModelMapper {
     long countByExample(SellerModelExample example);
 
     int deleteByExample(SellerModelExample example);
 
-    int deleteByPrimaryKey(Integer idSeller);
+    int deleteByPrimaryKey(Integer sellerId);
 
     int insert(SellerModel record);
 
@@ -20,7 +18,7 @@ public interface SellerModelMapper {
 
     List<SellerModel> selectByExample(SellerModelExample example);
 
-    SellerModel selectByPrimaryKey(Integer idSeller);
+    SellerModel selectByPrimaryKey(Integer sellerId);
 
     int updateByExampleSelective(@Param("record") SellerModel record, @Param("example") SellerModelExample example);
 

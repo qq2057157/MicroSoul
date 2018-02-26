@@ -11,19 +11,15 @@ public class GoodsModel {
 
     private Integer store;
 
-    //商品的单价
     private Integer unitPrice;
 
     private String goodsName;
 
     private Integer discount;
 
-    //商品的购买数量
     private Integer purchaseQuantity;
 
-    private Integer collectionGoodsId;
-
-    private Integer sellerGoodsId;
+    private Integer sellerId;
 
     public Integer getGoodsId() {
         return goodsId;
@@ -97,19 +93,11 @@ public class GoodsModel {
         this.purchaseQuantity = purchaseQuantity;
     }
 
-    public Integer getCollectionGoodsId() {
-        return collectionGoodsId;
+    public Integer getSellerId() {
+        return sellerId;
     }
 
-    public void setCollectionGoodsId(Integer collectionGoodsId) {
-        this.collectionGoodsId = collectionGoodsId;
-    }
-
-    public Integer getSellerGoodsId() {
-        return sellerGoodsId;
-    }
-
-    public void setSellerGoodsId(Integer sellerGoodsId) {
-        this.sellerGoodsId = sellerGoodsId;
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
     }
 }

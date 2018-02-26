@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hust.microsoul.mapper.BuyerModelMapper">
-  <resultMap id="BaseResultMap" type="buyerModel">
-    <id column="BUYERS_ID" jdbcType="INTEGER" property="buyersId" />
+  <resultMap id="BaseResultMap" type="com.hust.microsoul.model.BuyerModel">
+    <id column="BUYER_ID" jdbcType="INTEGER" property="buyerId" />
     <result column="ACCOUNT_NAME" jdbcType="VARCHAR" property="accountName" />
     <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
     <result column="ZHIFUBAO_ACCOUNT" jdbcType="VARCHAR" property="zhifubaoAccount" />
     <result column="EMAIL" jdbcType="VARCHAR" property="email" />
-    <result column="QQ_ACCOUNT" jdbcType="INTEGER" property="qqAccount" />
+    <result column="QQ_ACCOUNT" jdbcType="VARCHAR" property="qqAccount" />
     <result column="REAL_NAME" jdbcType="VARCHAR" property="realName" />
     <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
-    <result column="TELEPHONE" jdbcType="INTEGER" property="telephone" />
+    <result column="TELEPHONE" jdbcType="VARCHAR" property="telephone" />
     <result column="STATE" jdbcType="INTEGER" property="state" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -72,7 +72,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    BUYERS_ID, ACCOUNT_NAME, PASSWORD, ZHIFUBAO_ACCOUNT, EMAIL, QQ_ACCOUNT, REAL_NAME, 
+    BUYER_ID, ACCOUNT_NAME, PASSWORD, ZHIFUBAO_ACCOUNT, EMAIL, QQ_ACCOUNT, REAL_NAME, 
     ADDRESS, TELEPHONE, STATE
   </sql>
   <select id="selectByExample" parameterType="com.hust.microsoul.model.BuyerModelExample" resultMap="BaseResultMap">
@@ -93,11 +93,11 @@
     select 
     <include refid="Base_Column_List" />
     from buyer
-    where BUYERS_ID = #{buyersId,jdbcType=INTEGER}
+    where BUYER_ID = #{buyerId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from buyer
-    where BUYERS_ID = #{buyersId,jdbcType=INTEGER}
+    where BUYER_ID = #{buyerId,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.hust.microsoul.model.BuyerModelExample">
     delete from buyer
@@ -106,20 +106,20 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.hust.microsoul.model.BuyerModel">
-    insert into buyer (BUYERS_ID, ACCOUNT_NAME, PASSWORD, 
+    insert into buyer (BUYER_ID, ACCOUNT_NAME, PASSWORD, 
       ZHIFUBAO_ACCOUNT, EMAIL, QQ_ACCOUNT, 
       REAL_NAME, ADDRESS, TELEPHONE, 
       STATE)
-    values (#{buyersId,jdbcType=INTEGER}, #{accountName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{zhifubaoAccount,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{qqAccount,jdbcType=INTEGER}, 
-      #{realName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{telephone,jdbcType=INTEGER}, 
+    values (#{buyerId,jdbcType=INTEGER}, #{accountName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{zhifubaoAccount,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{qqAccount,jdbcType=VARCHAR}, 
+      #{realName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, 
       #{state,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.hust.microsoul.model.BuyerModel">
     insert into buyer
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="buyersId != null">
-        BUYERS_ID,
+      <if test="buyerId != null">
+        BUYER_ID,
       </if>
       <if test="accountName != null">
         ACCOUNT_NAME,
@@ -150,8 +150,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="buyersId != null">
-        #{buyersId,jdbcType=INTEGER},
+      <if test="buyerId != null">
+        #{buyerId,jdbcType=INTEGER},
       </if>
       <if test="accountName != null">
         #{accountName,jdbcType=VARCHAR},
@@ -166,7 +166,7 @@
         #{email,jdbcType=VARCHAR},
       </if>
       <if test="qqAccount != null">
-        #{qqAccount,jdbcType=INTEGER},
+        #{qqAccount,jdbcType=VARCHAR},
       </if>
       <if test="realName != null">
         #{realName,jdbcType=VARCHAR},
@@ -175,7 +175,7 @@
         #{address,jdbcType=VARCHAR},
       </if>
       <if test="telephone != null">
-        #{telephone,jdbcType=INTEGER},
+        #{telephone,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         #{state,jdbcType=INTEGER},
@@ -191,8 +191,8 @@
   <update id="updateByExampleSelective" parameterType="map">
     update buyer
     <set>
-      <if test="record.buyersId != null">
-        BUYERS_ID = #{record.buyersId,jdbcType=INTEGER},
+      <if test="record.buyerId != null">
+        BUYER_ID = #{record.buyerId,jdbcType=INTEGER},
       </if>
       <if test="record.accountName != null">
         ACCOUNT_NAME = #{record.accountName,jdbcType=VARCHAR},
@@ -207,7 +207,7 @@
         EMAIL = #{record.email,jdbcType=VARCHAR},
       </if>
       <if test="record.qqAccount != null">
-        QQ_ACCOUNT = #{record.qqAccount,jdbcType=INTEGER},
+        QQ_ACCOUNT = #{record.qqAccount,jdbcType=VARCHAR},
       </if>
       <if test="record.realName != null">
         REAL_NAME = #{record.realName,jdbcType=VARCHAR},
@@ -216,7 +216,7 @@
         ADDRESS = #{record.address,jdbcType=VARCHAR},
       </if>
       <if test="record.telephone != null">
-        TELEPHONE = #{record.telephone,jdbcType=INTEGER},
+        TELEPHONE = #{record.telephone,jdbcType=VARCHAR},
       </if>
       <if test="record.state != null">
         STATE = #{record.state,jdbcType=INTEGER},
@@ -228,15 +228,15 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update buyer
-    set BUYERS_ID = #{record.buyersId,jdbcType=INTEGER},
+    set BUYER_ID = #{record.buyerId,jdbcType=INTEGER},
       ACCOUNT_NAME = #{record.accountName,jdbcType=VARCHAR},
       PASSWORD = #{record.password,jdbcType=VARCHAR},
       ZHIFUBAO_ACCOUNT = #{record.zhifubaoAccount,jdbcType=VARCHAR},
       EMAIL = #{record.email,jdbcType=VARCHAR},
-      QQ_ACCOUNT = #{record.qqAccount,jdbcType=INTEGER},
+      QQ_ACCOUNT = #{record.qqAccount,jdbcType=VARCHAR},
       REAL_NAME = #{record.realName,jdbcType=VARCHAR},
       ADDRESS = #{record.address,jdbcType=VARCHAR},
-      TELEPHONE = #{record.telephone,jdbcType=INTEGER},
+      TELEPHONE = #{record.telephone,jdbcType=VARCHAR},
       STATE = #{record.state,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -258,7 +258,7 @@
         EMAIL = #{email,jdbcType=VARCHAR},
       </if>
       <if test="qqAccount != null">
-        QQ_ACCOUNT = #{qqAccount,jdbcType=INTEGER},
+        QQ_ACCOUNT = #{qqAccount,jdbcType=VARCHAR},
       </if>
       <if test="realName != null">
         REAL_NAME = #{realName,jdbcType=VARCHAR},
@@ -267,13 +267,13 @@
         ADDRESS = #{address,jdbcType=VARCHAR},
       </if>
       <if test="telephone != null">
-        TELEPHONE = #{telephone,jdbcType=INTEGER},
+        TELEPHONE = #{telephone,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         STATE = #{state,jdbcType=INTEGER},
       </if>
     </set>
-    where BUYERS_ID = #{buyersId,jdbcType=INTEGER}
+    where BUYER_ID = #{buyerId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.hust.microsoul.model.BuyerModel">
     update buyer
@@ -281,12 +281,12 @@
       PASSWORD = #{password,jdbcType=VARCHAR},
       ZHIFUBAO_ACCOUNT = #{zhifubaoAccount,jdbcType=VARCHAR},
       EMAIL = #{email,jdbcType=VARCHAR},
-      QQ_ACCOUNT = #{qqAccount,jdbcType=INTEGER},
+      QQ_ACCOUNT = #{qqAccount,jdbcType=VARCHAR},
       REAL_NAME = #{realName,jdbcType=VARCHAR},
       ADDRESS = #{address,jdbcType=VARCHAR},
-      TELEPHONE = #{telephone,jdbcType=INTEGER},
+      TELEPHONE = #{telephone,jdbcType=VARCHAR},
       STATE = #{state,jdbcType=INTEGER}
-    where BUYERS_ID = #{buyersId,jdbcType=INTEGER}
+    where BUYER_ID = #{buyerId,jdbcType=INTEGER}
   </update>
   <select id="buyerLogin" parameterType="String" resultType="String">
    select
@@ -296,7 +296,7 @@
    where 
    		ACCOUNT_NAME= #{accountName}  
   </select>
-    <insert id="buyerRegister" parameterType="com.hust.microsoul.model.BuyerModel" >
+    <insert id="buyerRegister" parameterType="com.hust.microsoul.model.BuyerModel">
     insert into buyer 
 			<trim prefix="(" suffix=")" suffixOverrides=",">
 				<if test="accountName != null">

@@ -104,63 +104,63 @@ public class SellerModelExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andIdSellerIsNull() {
-            addCriterion("ID_SELLER is null");
+        public Criteria andSellerIdIsNull() {
+            addCriterion("SELLER_ID is null");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerIsNotNull() {
-            addCriterion("ID_SELLER is not null");
+        public Criteria andSellerIdIsNotNull() {
+            addCriterion("SELLER_ID is not null");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerEqualTo(Integer value) {
-            addCriterion("ID_SELLER =", value, "idSeller");
+        public Criteria andSellerIdEqualTo(Integer value) {
+            addCriterion("SELLER_ID =", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerNotEqualTo(Integer value) {
-            addCriterion("ID_SELLER <>", value, "idSeller");
+        public Criteria andSellerIdNotEqualTo(Integer value) {
+            addCriterion("SELLER_ID <>", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerGreaterThan(Integer value) {
-            addCriterion("ID_SELLER >", value, "idSeller");
+        public Criteria andSellerIdGreaterThan(Integer value) {
+            addCriterion("SELLER_ID >", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerGreaterThanOrEqualTo(Integer value) {
-            addCriterion("ID_SELLER >=", value, "idSeller");
+        public Criteria andSellerIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("SELLER_ID >=", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerLessThan(Integer value) {
-            addCriterion("ID_SELLER <", value, "idSeller");
+        public Criteria andSellerIdLessThan(Integer value) {
+            addCriterion("SELLER_ID <", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerLessThanOrEqualTo(Integer value) {
-            addCriterion("ID_SELLER <=", value, "idSeller");
+        public Criteria andSellerIdLessThanOrEqualTo(Integer value) {
+            addCriterion("SELLER_ID <=", value, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerIn(List<Integer> values) {
-            addCriterion("ID_SELLER in", values, "idSeller");
+        public Criteria andSellerIdIn(List<Integer> values) {
+            addCriterion("SELLER_ID in", values, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerNotIn(List<Integer> values) {
-            addCriterion("ID_SELLER not in", values, "idSeller");
+        public Criteria andSellerIdNotIn(List<Integer> values) {
+            addCriterion("SELLER_ID not in", values, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerBetween(Integer value1, Integer value2) {
-            addCriterion("ID_SELLER between", value1, value2, "idSeller");
+        public Criteria andSellerIdBetween(Integer value1, Integer value2) {
+            addCriterion("SELLER_ID between", value1, value2, "sellerId");
             return (Criteria) this;
         }
 
-        public Criteria andIdSellerNotBetween(Integer value1, Integer value2) {
-            addCriterion("ID_SELLER not between", value1, value2, "idSeller");
+        public Criteria andSellerIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("SELLER_ID not between", value1, value2, "sellerId");
             return (Criteria) this;
         }
 
@@ -454,52 +454,62 @@ public class SellerModelExample {
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountEqualTo(Integer value) {
+        public Criteria andQqAccountEqualTo(String value) {
             addCriterion("QQ_ACCOUNT =", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotEqualTo(Integer value) {
+        public Criteria andQqAccountNotEqualTo(String value) {
             addCriterion("QQ_ACCOUNT <>", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountGreaterThan(Integer value) {
+        public Criteria andQqAccountGreaterThan(String value) {
             addCriterion("QQ_ACCOUNT >", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountGreaterThanOrEqualTo(Integer value) {
+        public Criteria andQqAccountGreaterThanOrEqualTo(String value) {
             addCriterion("QQ_ACCOUNT >=", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountLessThan(Integer value) {
+        public Criteria andQqAccountLessThan(String value) {
             addCriterion("QQ_ACCOUNT <", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountLessThanOrEqualTo(Integer value) {
+        public Criteria andQqAccountLessThanOrEqualTo(String value) {
             addCriterion("QQ_ACCOUNT <=", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountIn(List<Integer> values) {
+        public Criteria andQqAccountLike(String value) {
+            addCriterion("QQ_ACCOUNT like", value, "qqAccount");
+            return (Criteria) this;
+        }
+
+        public Criteria andQqAccountNotLike(String value) {
+            addCriterion("QQ_ACCOUNT not like", value, "qqAccount");
+            return (Criteria) this;
+        }
+
+        public Criteria andQqAccountIn(List<String> values) {
             addCriterion("QQ_ACCOUNT in", values, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotIn(List<Integer> values) {
+        public Criteria andQqAccountNotIn(List<String> values) {
             addCriterion("QQ_ACCOUNT not in", values, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountBetween(Integer value1, Integer value2) {
+        public Criteria andQqAccountBetween(String value1, String value2) {
             addCriterion("QQ_ACCOUNT between", value1, value2, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotBetween(Integer value1, Integer value2) {
+        public Criteria andQqAccountNotBetween(String value1, String value2) {
             addCriterion("QQ_ACCOUNT not between", value1, value2, "qqAccount");
             return (Criteria) this;
         }
@@ -724,52 +734,62 @@ public class SellerModelExample {
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneEqualTo(Integer value) {
+        public Criteria andTelephoneEqualTo(String value) {
             addCriterion("TELEPHONE =", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotEqualTo(Integer value) {
+        public Criteria andTelephoneNotEqualTo(String value) {
             addCriterion("TELEPHONE <>", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneGreaterThan(Integer value) {
+        public Criteria andTelephoneGreaterThan(String value) {
             addCriterion("TELEPHONE >", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneGreaterThanOrEqualTo(Integer value) {
+        public Criteria andTelephoneGreaterThanOrEqualTo(String value) {
             addCriterion("TELEPHONE >=", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneLessThan(Integer value) {
+        public Criteria andTelephoneLessThan(String value) {
             addCriterion("TELEPHONE <", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneLessThanOrEqualTo(Integer value) {
+        public Criteria andTelephoneLessThanOrEqualTo(String value) {
             addCriterion("TELEPHONE <=", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneIn(List<Integer> values) {
+        public Criteria andTelephoneLike(String value) {
+            addCriterion("TELEPHONE like", value, "telephone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTelephoneNotLike(String value) {
+            addCriterion("TELEPHONE not like", value, "telephone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTelephoneIn(List<String> values) {
             addCriterion("TELEPHONE in", values, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotIn(List<Integer> values) {
+        public Criteria andTelephoneNotIn(List<String> values) {
             addCriterion("TELEPHONE not in", values, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneBetween(Integer value1, Integer value2) {
+        public Criteria andTelephoneBetween(String value1, String value2) {
             addCriterion("TELEPHONE between", value1, value2, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotBetween(Integer value1, Integer value2) {
+        public Criteria andTelephoneNotBetween(String value1, String value2) {
             addCriterion("TELEPHONE not between", value1, value2, "telephone");
             return (Criteria) this;
         }
@@ -831,66 +851,6 @@ public class SellerModelExample {
 
         public Criteria andStateNotBetween(Integer value1, Integer value2) {
             addCriterion("STATE not between", value1, value2, "state");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdIsNull() {
-            addCriterion("ORDER_SELLER_ID is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdIsNotNull() {
-            addCriterion("ORDER_SELLER_ID is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdEqualTo(Integer value) {
-            addCriterion("ORDER_SELLER_ID =", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdNotEqualTo(Integer value) {
-            addCriterion("ORDER_SELLER_ID <>", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdGreaterThan(Integer value) {
-            addCriterion("ORDER_SELLER_ID >", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("ORDER_SELLER_ID >=", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdLessThan(Integer value) {
-            addCriterion("ORDER_SELLER_ID <", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdLessThanOrEqualTo(Integer value) {
-            addCriterion("ORDER_SELLER_ID <=", value, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdIn(List<Integer> values) {
-            addCriterion("ORDER_SELLER_ID in", values, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdNotIn(List<Integer> values) {
-            addCriterion("ORDER_SELLER_ID not in", values, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdBetween(Integer value1, Integer value2) {
-            addCriterion("ORDER_SELLER_ID between", value1, value2, "orderSellerId");
-            return (Criteria) this;
-        }
-
-        public Criteria andOrderSellerIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("ORDER_SELLER_ID not between", value1, value2, "orderSellerId");
             return (Criteria) this;
         }
     }

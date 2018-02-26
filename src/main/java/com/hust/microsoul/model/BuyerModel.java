@@ -1,7 +1,7 @@
 package com.hust.microsoul.model;
 
 public class BuyerModel {
-    private Integer buyersId;
+    private Integer buyerId;
 
     private String accountName;
 
@@ -11,22 +11,22 @@ public class BuyerModel {
 
     private String email;
 
-    private Integer qqAccount;
+    private String qqAccount;
 
     private String realName;
 
     private String address;
 
-    private Integer telephone;
+    private String telephone;
 
     private Integer state;
 
-    public Integer getBuyersId() {
-        return buyersId;
+    public Integer getBuyerId() {
+        return buyerId;
     }
 
-    public void setBuyersId(Integer buyersId) {
-        this.buyersId = buyersId;
+    public void setBuyerId(Integer buyerId) {
+        this.buyerId = buyerId;
     }
 
     public String getAccountName() {
@@ -61,12 +61,12 @@ public class BuyerModel {
         this.email = email == null ? null : email.trim();
     }
 
-    public Integer getQqAccount() {
+    public String getQqAccount() {
         return qqAccount;
     }
 
-    public void setQqAccount(Integer qqAccount) {
-        this.qqAccount = qqAccount;
+    public void setQqAccount(String qqAccount) {
+        this.qqAccount = qqAccount == null ? null : qqAccount.trim();
     }
 
     public String getRealName() {
@@ -85,12 +85,12 @@ public class BuyerModel {
         this.address = address == null ? null : address.trim();
     }
 
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
-        this.telephone = telephone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone == null ? null : telephone.trim();
     }
 
     public Integer getState() {

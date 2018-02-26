@@ -5,9 +5,7 @@ import com.hust.microsoul.model.CollectionModelExample;
 import com.hust.microsoul.model.CollectionModelKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface CollectionModelMapper {
     long countByExample(CollectionModelExample example);
 

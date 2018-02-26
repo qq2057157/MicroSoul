@@ -4,15 +4,13 @@ import com.hust.microsoul.model.BuyerModel;
 import com.hust.microsoul.model.BuyerModelExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface BuyerModelMapper {
     long countByExample(BuyerModelExample example);
 
     int deleteByExample(BuyerModelExample example);
 
-    int deleteByPrimaryKey(Integer buyersId);
+    int deleteByPrimaryKey(Integer buyerId);
 
     int insert(BuyerModel record);
 
@@ -20,7 +18,7 @@ public interface BuyerModelMapper {
 
     List<BuyerModel> selectByExample(BuyerModelExample example);
 
-    BuyerModel selectByPrimaryKey(Integer buyersId);
+    BuyerModel selectByPrimaryKey(Integer buyerId);
 
     int updateByExampleSelective(@Param("record") BuyerModel record, @Param("example") BuyerModelExample example);
 
@@ -29,10 +27,4 @@ public interface BuyerModelMapper {
     int updateByPrimaryKeySelective(BuyerModel record);
 
     int updateByPrimaryKey(BuyerModel record);
-    
-    public String buyerLogin(String accountName); 
-    
-    public BuyerModel checkaccountName(String accountName);
-    
-    public void buyerRegister(BuyerModel buyerModel) ;
 }

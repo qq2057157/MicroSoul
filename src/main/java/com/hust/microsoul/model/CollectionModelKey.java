@@ -1,23 +1,23 @@
 package com.hust.microsoul.model;
 
 public class CollectionModelKey {
-    private Integer buyerCollectionId;
+    private Integer buyerId;
 
-    private Integer goodsCollectionId;
+    private Integer goodsId;
 
-    public Integer getBuyerCollectionId() {
-        return buyerCollectionId;
+    public Integer getBuyerId() {
+        return buyerId;
     }
 
-    public void setBuyerCollectionId(Integer buyerCollectionId) {
-        this.buyerCollectionId = buyerCollectionId;
+    public void setBuyerId(Integer buyerId) {
+        this.buyerId = buyerId;
     }
 
-    public Integer getGoodsCollectionId() {
-        return goodsCollectionId;
+    public Integer getGoodsId() {
+        return goodsId;
     }
 
-    public void setGoodsCollectionId(Integer goodsCollectionId) {
-        this.goodsCollectionId = goodsCollectionId;
+    public void setGoodsId(Integer goodsId) {
+        this.goodsId = goodsId;
     }
 }

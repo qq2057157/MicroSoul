@@ -104,63 +104,63 @@ public class BuyerModelExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andBuyersIdIsNull() {
-            addCriterion("BUYERS_ID is null");
+        public Criteria andBuyerIdIsNull() {
+            addCriterion("BUYER_ID is null");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdIsNotNull() {
-            addCriterion("BUYERS_ID is not null");
+        public Criteria andBuyerIdIsNotNull() {
+            addCriterion("BUYER_ID is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdEqualTo(Integer value) {
-            addCriterion("BUYERS_ID =", value, "buyersId");
+        public Criteria andBuyerIdEqualTo(Integer value) {
+            addCriterion("BUYER_ID =", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdNotEqualTo(Integer value) {
-            addCriterion("BUYERS_ID <>", value, "buyersId");
+        public Criteria andBuyerIdNotEqualTo(Integer value) {
+            addCriterion("BUYER_ID <>", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdGreaterThan(Integer value) {
-            addCriterion("BUYERS_ID >", value, "buyersId");
+        public Criteria andBuyerIdGreaterThan(Integer value) {
+            addCriterion("BUYER_ID >", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("BUYERS_ID >=", value, "buyersId");
+        public Criteria andBuyerIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("BUYER_ID >=", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdLessThan(Integer value) {
-            addCriterion("BUYERS_ID <", value, "buyersId");
+        public Criteria andBuyerIdLessThan(Integer value) {
+            addCriterion("BUYER_ID <", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdLessThanOrEqualTo(Integer value) {
-            addCriterion("BUYERS_ID <=", value, "buyersId");
+        public Criteria andBuyerIdLessThanOrEqualTo(Integer value) {
+            addCriterion("BUYER_ID <=", value, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdIn(List<Integer> values) {
-            addCriterion("BUYERS_ID in", values, "buyersId");
+        public Criteria andBuyerIdIn(List<Integer> values) {
+            addCriterion("BUYER_ID in", values, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdNotIn(List<Integer> values) {
-            addCriterion("BUYERS_ID not in", values, "buyersId");
+        public Criteria andBuyerIdNotIn(List<Integer> values) {
+            addCriterion("BUYER_ID not in", values, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdBetween(Integer value1, Integer value2) {
-            addCriterion("BUYERS_ID between", value1, value2, "buyersId");
+        public Criteria andBuyerIdBetween(Integer value1, Integer value2) {
+            addCriterion("BUYER_ID between", value1, value2, "buyerId");
             return (Criteria) this;
         }
 
-        public Criteria andBuyersIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("BUYERS_ID not between", value1, value2, "buyersId");
+        public Criteria andBuyerIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("BUYER_ID not between", value1, value2, "buyerId");
             return (Criteria) this;
         }
 
@@ -454,52 +454,62 @@ public class BuyerModelExample {
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountEqualTo(Integer value) {
+        public Criteria andQqAccountEqualTo(String value) {
             addCriterion("QQ_ACCOUNT =", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotEqualTo(Integer value) {
+        public Criteria andQqAccountNotEqualTo(String value) {
             addCriterion("QQ_ACCOUNT <>", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountGreaterThan(Integer value) {
+        public Criteria andQqAccountGreaterThan(String value) {
             addCriterion("QQ_ACCOUNT >", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountGreaterThanOrEqualTo(Integer value) {
+        public Criteria andQqAccountGreaterThanOrEqualTo(String value) {
             addCriterion("QQ_ACCOUNT >=", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountLessThan(Integer value) {
+        public Criteria andQqAccountLessThan(String value) {
             addCriterion("QQ_ACCOUNT <", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountLessThanOrEqualTo(Integer value) {
+        public Criteria andQqAccountLessThanOrEqualTo(String value) {
             addCriterion("QQ_ACCOUNT <=", value, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountIn(List<Integer> values) {
+        public Criteria andQqAccountLike(String value) {
+            addCriterion("QQ_ACCOUNT like", value, "qqAccount");
+            return (Criteria) this;
+        }
+
+        public Criteria andQqAccountNotLike(String value) {
+            addCriterion("QQ_ACCOUNT not like", value, "qqAccount");
+            return (Criteria) this;
+        }
+
+        public Criteria andQqAccountIn(List<String> values) {
             addCriterion("QQ_ACCOUNT in", values, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotIn(List<Integer> values) {
+        public Criteria andQqAccountNotIn(List<String> values) {
             addCriterion("QQ_ACCOUNT not in", values, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountBetween(Integer value1, Integer value2) {
+        public Criteria andQqAccountBetween(String value1, String value2) {
             addCriterion("QQ_ACCOUNT between", value1, value2, "qqAccount");
             return (Criteria) this;
         }
 
-        public Criteria andQqAccountNotBetween(Integer value1, Integer value2) {
+        public Criteria andQqAccountNotBetween(String value1, String value2) {
             addCriterion("QQ_ACCOUNT not between", value1, value2, "qqAccount");
             return (Criteria) this;
         }
@@ -654,52 +664,62 @@ public class BuyerModelExample {
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneEqualTo(Integer value) {
+        public Criteria andTelephoneEqualTo(String value) {
             addCriterion("TELEPHONE =", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotEqualTo(Integer value) {
+        public Criteria andTelephoneNotEqualTo(String value) {
             addCriterion("TELEPHONE <>", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneGreaterThan(Integer value) {
+        public Criteria andTelephoneGreaterThan(String value) {
             addCriterion("TELEPHONE >", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneGreaterThanOrEqualTo(Integer value) {
+        public Criteria andTelephoneGreaterThanOrEqualTo(String value) {
             addCriterion("TELEPHONE >=", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneLessThan(Integer value) {
+        public Criteria andTelephoneLessThan(String value) {
             addCriterion("TELEPHONE <", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneLessThanOrEqualTo(Integer value) {
+        public Criteria andTelephoneLessThanOrEqualTo(String value) {
             addCriterion("TELEPHONE <=", value, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneIn(List<Integer> values) {
+        public Criteria andTelephoneLike(String value) {
+            addCriterion("TELEPHONE like", value, "telephone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTelephoneNotLike(String value) {
+            addCriterion("TELEPHONE not like", value, "telephone");
+            return (Criteria) this;
+        }
+
+        public Criteria andTelephoneIn(List<String> values) {
             addCriterion("TELEPHONE in", values, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotIn(List<Integer> values) {
+        public Criteria andTelephoneNotIn(List<String> values) {
             addCriterion("TELEPHONE not in", values, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneBetween(Integer value1, Integer value2) {
+        public Criteria andTelephoneBetween(String value1, String value2) {
             addCriterion("TELEPHONE between", value1, value2, "telephone");
             return (Criteria) this;
         }
 
-        public Criteria andTelephoneNotBetween(Integer value1, Integer value2) {
+        public Criteria andTelephoneNotBetween(String value1, String value2) {
             addCriterion("TELEPHONE not between", value1, value2, "telephone");
             return (Criteria) this;
         }
